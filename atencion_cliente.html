@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atencion_cliente</title>
+    <link rel="stylesheet" href="atencion_cliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="atencion_cliente.js" defer></script>
+</head>
+<body>
+    <!------------------------------------->
+    <!--|estructuracion_atencion_cliente|-->
+    <!------------------------------------->
+    <main class="contenedor">
+        <!-- Encabezado con título y descripción -->
+        <header class="encabezado">
+            <h1>💬 Atención Cliente</h1>
+            <p>Escríbenos y te responderemos lo antes posible.</p>
+        </header>
+        <!-- Información de contacto y horario de atención -->
+        <aside class="info">
+            <h2>🕒 Horario de atención</h2>
+            <p>Lunes a viernes: 8:00 a.m. – 6:00 p.m.</p>
+            <p>Sábados: 9:00 a.m. – 1:00 p.m.</p>
+            <p>Respondemos en un máximo de 24 horas.</p>
+        </aside>
+        <!-- Formulario de contacto (novalidate: la validación la hace JavaScript) -->
+        <form id="formulario" class="formulario" novalidate>
+            <!-- Campo: nombre completo -->
+            <label class="campo">Nombre
+                <input type="text" id="nombre" placeholder="Tu nombre completo">
+                <span class="error" id="error-nombre"></span>
+            </label>
+            <!-- Campo: correo electrónico -->
+            <label class="campo">Correo electrónico
+                <input type="email" id="correo" placeholder="correo@ejemplo.com">
+                <span class="error" id="error-correo"></span>
+            </label>
+            <!-- Campo: teléfono (opcional) -->
+            <label class="campo">Teléfono (opcional)
+                <input type="tel" id="telefono" placeholder="Solo números">
+                <span class="error" id="error-telefono"></span>
+            </label>
+            <!-- Campo: asunto, se elige de una lista -->
+            <label class="campo">Asunto
+                <select id="asunto">
+                    <option value="Consulta">Consulta</option>
+                    <option value="Reclamo">Reclamo</option>
+                    <option value="Sugerencia">Sugerencia</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </label>
+            <!-- Campo: mensaje, con contador de caracteres -->
+            <label class="campo">Mensaje
+                <textarea id="mensaje" rows="4" maxlength="300" placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
+                <span class="contador" id="contador">0/300</span>
+                <span class="error" id="error-mensaje"></span>
+            </label>
+            <!-- Casilla para aceptar el tratamiento de datos -->
+            <label class="acepto">
+                <input type="checkbox" id="acepto"> Acepto el tratamiento de mis datos
+            </label>
+            <span class="error" id="error-acepto"></span>
+            <!-- Botón para enviar el formulario -->
+            <button type="submit" class="boton">Enviar mensaje</button>
+            <!-- Aviso que dice si el envío fue correcto o tiene errores -->
+            <p class="aviso" id="aviso"></p>
+        </form>
+        <!-- Historial de los mensajes enviados -->
+        <section class="historial">
+            <h2>📨 Mensajes enviados</h2>
+            <ul id="lista"></ul>
+            <button id="btn-borrar" class="borrar">Borrar historial</button>
+        </section>
+    </main>
+</body>
+</html>

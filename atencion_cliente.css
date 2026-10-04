@@ -1,0 +1,87 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Variables de color para reutilizarlas en todo el diseño */
+:root {
+    --fondo: #f0f9ff;
+    --tarjeta: #ffffff;
+    --principal: #0284c7;
+    --bien: #16a34a;
+    --mal: #dc2626;
+    --texto: #1f2937;
+}
+/* Fondo y tipografía de toda la página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    padding: 24px 16px;
+}
+/* ===== Contenedor y encabezado ===== */
+/* Caja central que agrupa todo el contenido */
+.contenedor { max-width: 520px; margin: 0 auto; }
+/* Encabezado centrado */
+.encabezado { text-align: center; margin-bottom: 20px; }
+.encabezado h1 { color: var(--principal); margin-bottom: 6px; }
+.encabezado p { color: #6b7280; }
+/* ===== Horario de atención ===== */
+/* Caja azul clara con el horario */
+.info { background: #e0f2fe; border-radius: 12px; padding: 16px; margin-bottom: 20px; font-size: 0.9rem; }
+.info h2 { font-size: 1rem; margin-bottom: 6px; }
+/* ===== Formulario ===== */
+/* Tarjeta blanca que contiene los campos */
+.formulario, .historial {
+    background: var(--tarjeta);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+/* Cada campo: etiqueta arriba y casilla abajo */
+.campo { display: block; margin-bottom: 14px; font-weight: bold; }
+/* Casillas de texto, lista y área de mensaje */
+.campo input, .campo select, .campo textarea {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+/* Resalta la casilla cuando se está escribiendo en ella */
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    outline: none;
+    border-color: var(--principal);
+}
+/* Contador de caracteres del mensaje */
+.contador { display: block; text-align: right; font-size: 0.8rem; color: #6b7280; font-weight: normal; }
+/* Mensaje de error de cada campo (vacío si no hay error) */
+.error { display: block; min-height: 1.1em; color: var(--mal); font-size: 0.85rem; font-weight: normal; }
+/* Casilla de aceptar datos */
+.acepto { display: block; margin-bottom: 4px; }
+/* ===== Botones y avisos ===== */
+/* Botón de enviar */
+.boton {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--principal);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Efecto al pasar el mouse por el botón */
+.boton:hover { opacity: 0.85; }
+/* Aviso general bajo el botón (clases ok y mal las añade el JS) */
+.aviso { margin-top: 12px; text-align: center; font-weight: bold; }
+.aviso.ok { color: var(--bien); }
+.aviso.mal { color: var(--mal); }
+/* ===== Historial ===== */
+/* Lista de mensajes enviados */
+.historial ul { list-style: none; margin: 12px 0; }
+.historial li { padding: 10px; border-bottom: 1px solid #e5e7eb; font-size: 0.9rem; }
+/* Botón de borrar historial */
+.borrar { padding: 6px 12px; border: none; border-radius: 6px; background: #6b7280; color: #fff; cursor: pointer; }
