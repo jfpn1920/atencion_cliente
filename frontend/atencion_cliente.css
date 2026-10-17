@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --fondo: #f0f9ff;
+    --tarjeta: #ffffff;
+    --principal: #0284c7;
+    --bien: #16a34a;
+    --mal: #dc2626;
+    --texto: #1f2937;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    padding: 24px 16px;
+}
+/*-----------------------------*/
+/*--|estilo_atencion_cliente|--*/    
+/*-----------------------------*/
+.contenedor {
+    max-width: 520px;
+    margin: 0 auto;
+}
+.encabezado {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.encabezado h1 {
+    color: var(--principal);
+    margin-bottom: 6px;
+}
+.encabezado p {
+    color: #6b7280;
+}
+/*--------------------------------*/
+/*--|estilo_horario_de_atencion|--*/
+/*--------------------------------*/
+.info {
+    background: #e0f2fe;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+.info h2 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+.formulario,
+.historial {
+    background: var(--tarjeta);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.campo {
+    display: block;
+    margin-bottom: 14px;
+    font-weight: bold;
+}
+.campo input,
+.campo select,
+.campo textarea {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--principal);
+}
+/*-----------------------------------------*/
+/*--|estilo_contador_y_mensajes_de_error|--*/
+/*-----------------------------------------*/
+.contador {
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+    color: #6b7280;
+    font-weight: normal;
+}
+.error {
+    display: block;
+    min-height: 1.1em;
+    color: var(--mal);
+    font-size: 0.85rem;
+    font-weight: normal;
+}
+.acepto {
+    display: block;
+    margin-bottom: 4px;
+}
+.boton {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--principal);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.boton:hover {
+    opacity: 0.85;
+}
+.aviso {
+    margin-top: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+.aviso.ok {
+    color: var(--bien);
+}
+.aviso.mal {
+    color: var(--mal);
+}
+/*----------------------------------*/
+/*--|estilo_historial_de_mensajes|--*/
+/*----------------------------------*/
+.historial ul {
+    list-style: none;
+    margin: 12px 0;
+}
+.historial li {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+}
+/*-----------------------------------*/
+/*--|estilo_boton_borrar_historial|--*/
+/*-----------------------------------*/
+.borrar {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #6b7280;
+    color: #fff;
+    cursor: pointer;
+}
